@@ -1,0 +1,16 @@
+{% extends "jusin.html" %}
+{% block main %}
+<div class="row">
+    <div class="col-sm">
+        <h2>Use app password</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Read your receivebox"  />
+        </form>  
+    </div>
+    <div class="col-sm">
+        <p>{{ new_text }}</p>
+    </div>
+</div>
+{% endblock %}

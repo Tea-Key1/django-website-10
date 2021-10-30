@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% load l10n %}
+{% block main %}
+<h2>{{ object.name }}</h2>
+<div>
+    {{ object.mail }}
+</div>
+<a href="{% url 'update' object.pk %}">編集</a>
+<a href="{% url 'delete' object.pk %}">削除</a>
+<p><a href="/">一覧に戻る</a></p>
+{% endblock %}

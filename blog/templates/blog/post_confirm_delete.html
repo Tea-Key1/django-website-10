@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block main %}
+<h2>削除確認</h2>
+<p>{{ object.name }}を本当に削除してもよろしいですか？</p>
+<form method="post">
+    {% csrf_token %}
+    <p><a href="/">Back</a></p>
+    <input type="submit" value="削除" />
+</form>
+{% endblock %}

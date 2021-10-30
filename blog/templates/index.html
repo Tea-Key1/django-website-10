@@ -1,0 +1,17 @@
+{% extends "sousin.html" %}
+{% block main %}
+<div class="row">
+    <div class="col-sm">
+        <h2>Use app password</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Send button"  />
+        </form>  
+    </div>
+    <div class="col-sm">
+        <p>{{ new_text }}</p>
+    </div>
+    <input type="button" onclick="window.history.back();" value="Send additionally">
+</div>
+{% endblock %}

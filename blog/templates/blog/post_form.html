@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+</head>
+<body>
+	<section>
+		<div class="box">
+			<div class="form">
+                <h2>新規登録</h2>
+                <p><a href="/">Back</a></p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="登録" />
+                </form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
