@@ -69,7 +69,7 @@ class Sousin(FormView):
             server.send_message(msg)
             server.quit()
             # テンプレートに渡す
-            ctxt = self.get_context_data(new_text="送信完了", form=form)
+            ctxt = self.get_context_data(new_text="Send complete", form=form)
             return self.render_to_response(ctxt)
         except:
             ctxt = self.get_context_data(new_text="The password is not correspond with address", form=form)
