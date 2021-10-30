@@ -62,6 +62,9 @@ class Sousin(FormView):
         # メール送信処理
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
+        if not server.login(from_addr, from_pass)
+            ctxt = self.get_context_data(new_text="The address is not correspond with password" form=form)
+            return self.render_to_response(ctxt)
         server.login(from_addr, from_pass)
         server.send_message(msg)
         server.quit()
@@ -85,6 +88,9 @@ class Jusin(FormView):
         str_B = []
         i=0
         gmail = imaplib.IMAP4_SSL("imap.gmail.com", '993')
+        if not gmail.login(UserName, PassName)
+            ctxt = self.get_context_data(new_text="The address is not correspond with password" form=form)
+            return self.render_to_response(ctxt)
         gmail.login(UserName, PassName)
         gmail.select()
         
