@@ -1,6 +1,6 @@
 {% extends "blog/base.html" %}
 {% block main %}
-<h2>登録者一覧</h2>
+<h2>List of registrants</h2>
 <ol>
     {% for post in object_list %}
     <li><a href="{% url 'detail' post.id %}">{{ post.name }}</a></li>
